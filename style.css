@@ -201,13 +201,26 @@ a:focus {
 }
 
 .grid__item-img {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: 50% 50%;
-	z-index: 100;
-	border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 100;
+    border-radius: 10px;
+    animation: moveAnimation 3s infinite alternate; /* Thêm animation vào đây */
+}
+
+@keyframes moveAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(12px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .grid--img .grid__item-img {
