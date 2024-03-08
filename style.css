@@ -222,6 +222,22 @@ a:focus {
         transform: translateX(0);
     }
 }
+@keyframes hoaRoi {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
+
+.canh-hoa {
+    position: absolute;
+    width: 50px; /* Điều chỉnh kích thước của cánh hoa */
+    animation: hoaRoi 5s linear infinite; /* Điều chỉnh thời gian và loại animation tại đây */
+}
 
 .grid--img .grid__item-img {
 	flex: none;

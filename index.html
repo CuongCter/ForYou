@@ -21,7 +21,11 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 		<audio id="myAudio"  autoplay>
 			<source src="./asset/MissYouAllYear.mp3" type="audio/mpeg">
 		</audio>
-
+		<div class="container">
+			<!-- Đặt ảnh cánh hoa vào đây -->
+			<img src="./asset/canhhoa.png" width="10" alt="Cánh hoa" class="canh-hoa">
+			
+		</div>
 		<main>
 			</div>
 			<div class="content">
@@ -57,7 +61,42 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
             audio.play();
         }
     });
+	function createFlower() {
+            // Tạo một thẻ img mới
+            var flower = document.createElement("img");
+            flower.src = "./asset/canhhoa.png"; // Đường dẫn đến hình ảnh cánh hoa
+            flower.classList.add("canh-hoa"); // Thêm lớp CSS cho cánh hoa
 
+            // Thiết lập vị trí ngẫu nhiên cho cánh hoa
+            var randomX = Math.random() * window.innerWidth;
+            var randomY = -50; // Cách đỉnh trên cùng một chút
+
+            // Thiết lập vị trí cánh hoa
+            flower.style.left = randomX + "px";
+            flower.style.top = randomY + "px";
+
+            // Thêm cánh hoa vào trang
+            document.body.appendChild(flower);
+
+            // Animation cánh hoa rơi
+            flower.animate([
+                { transform: "translateY(" + randomY + "px)" },
+                { transform: "translateY(" + window.innerHeight + "px)" }
+            ], {
+                duration: Math.random() * 5000 + 3000,
+                easing: "linear",
+                iterations: 1,
+                fill: "forwards"
+            });
+
+            // Xóa cánh hoa khỏi DOM sau khi hoàn thành animation
+            flower.addEventListener("animationend", function() {
+                flower.remove();
+            });
+        }
+
+        // Gọi hàm tạo cánh hoa mỗi khoảng thời gian
+        setInterval(createFlower, 3000); //
 			</script>
 	</body>
 </html>
