@@ -187,7 +187,8 @@ a:focus {
 
 .grid__item {
 	position: relative;
-	opacity: 0.4,
+	opacity: 0.4;
+
 }
 
 .grid--img .grid__item {
@@ -196,6 +197,7 @@ a:focus {
 	align-items: center;
 	justify-content: center;
 	will-change: transform;
+
 }
 
 .grid__item-img {
@@ -205,6 +207,7 @@ a:focus {
 	background-size: cover;
 	background-position: 50% 50%;
 	z-index: 100;
+	border-radius: 10px;
 }
 
 .grid--img .grid__item-img {
