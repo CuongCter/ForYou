@@ -17,7 +17,11 @@ var supportsCssVars = function supportsCssVars() {
 
 supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
-	<body class="demo-1 loading">
+	<body class="demo-1  loading">
+		<audio id="myAudio"  autoplay>
+			<source src="./asset/MissYouAllYear.mp3" type="audio/mpeg">
+		</audio>
+
 		<main>
 			</div>
 			<div class="content">
@@ -30,7 +34,7 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 					<div class="grid__item pos-6"><div class="grid__item-img" style="background-image:url(./asset/6.jpg);" class="hover"></div></div>
 					<div class="grid__item pos-7"><div class="grid__item-img" style="background-image:url(./asset/7.jpg);" class="hover"></div></div>
 					<div class="grid__item pos-8"><div class="grid__item-img" style="background-image:url(./asset/8.jpg);" class="hover"></div></div>
-					<div class="grid__item pos-9"><div class="grid__item-img" style="background-image:url(./asset/9.jpg);" class="hover"></div></div>
+					<div class="grid__item pos-9"><div class="grid__item-img" style="background-image:url(./asset/3.jpg);" class="hover"></div></div>
 					<div class="grid__item pos-10"><div class="grid__item-img" style="background-image:url(./asset/10.jpg);" class="hover"></div></div>
 				</div>
                 <h2 class="content__title no-select">
@@ -45,5 +49,15 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
 			<circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
 		</svg>
 		<script src="./script.js"></script>
+		<script>
+			document.addEventListener("click", function() {
+        var audio = document.getElementById("myAudio");
+        // Kiểm tra xem âm thanh đã được phát chưa, nếu chưa thì phát
+        if (audio.paused) {
+            audio.play();
+        }
+    });
+
+			</script>
 	</body>
 </html>
